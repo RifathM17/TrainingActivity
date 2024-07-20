@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Account{
+            constructor(acc_holder,acc_no,balance){
+                this.acc_holder=acc_holder
+                this.acc_no=acc_no
+                this.balance=balance
+            }
+            deposit(dep_amt){
+                this.balance+=dep_amt;
+                console.log("Amount Deposited,Balance:"+this.balance);
+            }
+            withdraw(w_amt){
+                this.balance-=w_amt;
+                console.log("Amount Withdraw,Balance:"+this.balance);
+            }
+            display(){
+                console.log("Balance:"+this.balance);
+            }
+
+        }
+        const acc1=new Account('Jame',123443,7887362)
+        acc1.deposit(345)
+        acc1.withdraw(455)
+        acc1.display()
+    </script>
+</body>
+</html>
